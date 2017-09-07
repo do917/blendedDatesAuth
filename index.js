@@ -4,7 +4,7 @@ const app = express();
 const request = require('request');
 const einstein = require('./tokenGenerator');
 const insta = require('instagram-node').instagram();
-const config = require('./config');
+// const config = require('./config');
 
 const redirect_uri = 'http://10.0.1.2:3000/api/instagram/getToken';
 
