@@ -1,5 +1,5 @@
 const express = require('express');
-const https = require('https');
+// const https = require('https');
 const fs = require('fs');
 const app = express();
 const request = require('request');
@@ -14,7 +14,7 @@ insta.use({
 });
 
 app.listen(process.env.PORT, function () {
-  console.log(`xample app listening on port ${process.env.PORT}!`);
+  console.log(`example app listening on port ${process.env.PORT}!`);
 });
 
 app.get('/', function (req, res) {  
