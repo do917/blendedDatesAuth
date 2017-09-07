@@ -6,7 +6,7 @@ const einstein = require('./tokenGenerator');
 const insta = require('instagram-node').instagram();
 // const config = require('./config');
 
-const redirect_uri = 'http://10.0.1.2:3000/api/instagram/getToken';
+const redirect_uri = 'https://floating-everglades-83969.herokuapp.com/api/instagram/getToken';
 
 insta.use({
   client_id: process.env.instaClientID,
