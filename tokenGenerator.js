@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken');
 const request = require('request');
-const config = require('./config');
+// const config = require('./config');
 
-var private_key = config.einstein.privateKey;
-var account_id = config.einstein.accountId;
+var private_key = process.env.einsteinPrivateKey;
+var account_id = process.env.einsteinAccountId;
 var reqUrl = 'https://api.einstein.ai/v2/oauth2/token';
 
 
