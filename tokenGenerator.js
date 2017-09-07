@@ -24,7 +24,7 @@ module.exports = {
        },
        expiresIn: '1h'
     }
-    
+
     // Sign the JWT payload
     var assertion = jwt.sign(
       rsa_payload,
@@ -44,7 +44,7 @@ module.exports = {
 
     request.post(options, function(error, response, body) {
       var data = JSON.parse(body);
-      console.log('einstein access token', data['access_token']);
+      console.log('einstein access token: ', data['access_token']);
       callback(data['access_token']);
     });
   }

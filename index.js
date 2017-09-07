@@ -13,7 +13,6 @@ insta.use({
   client_secret: config.insta.clientSecret
 });
 
-
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
@@ -22,7 +21,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.post('/authorize_user', (req, res) => {
+app.post('/api/auth', (req, res) => {
   res.send({
     success: true,
     url: insta.get_authorization_url(redirect_uri, { scope: ['likes'], state: 'a state' })
@@ -49,4 +48,3 @@ app.get('/api/einstein/getToken', (req, res) => {
     });
   });
 })
-
