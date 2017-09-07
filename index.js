@@ -9,8 +9,8 @@ const config = require('./config');
 const redirect_uri = 'http://10.0.1.2:3000/api/instagram/getToken';
 
 insta.use({
-  client_id: config.insta.clientID,
-  client_secret: config.insta.clientSecret
+  client_id: process.env.instaClientID || config.insta.clientID,
+  client_secret: process.env.instaClientSecret || config.insta.clientSecret
 });
 
 app.listen(3000, function () {
