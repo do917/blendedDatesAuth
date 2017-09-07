@@ -11,6 +11,7 @@ var reqUrl = 'https://api.einstein.ai/v2/oauth2/token';
 // Make the OAuth call to generate a token
 module.exports = {
   requestToken: function(callback) {
+    console.log('making einstein token request');
     // JWT payload
     var rsa_payload = {
       sub: account_id,
