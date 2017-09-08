@@ -31,7 +31,7 @@ app.get('/api/instagram/getToken', (req, res) => {
   insta.authorize_user(req.query.code, redirect_uri, (err, result) => {
     if (err) {
       console.log(err.body);
-      res.send('Didn\'t work');
+      res.send('Request for Instagram token error');
     } else {
       console.log('instagram access token: ' + result.access_token);
       res.redirect(`blendeddates://instaAuth?token=${result.access_token}`);
