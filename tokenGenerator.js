@@ -26,7 +26,7 @@ module.exports = {
     var assertion = jwt.sign(
       rsa_payload,
       private_key,
-      rsa_options
+      rsa_options,
     );
 
     var options = {
